@@ -1,0 +1,295 @@
+@import '../../sass/Global.scss';
+
+
+@mixin cover-image{
+    height: 600px;
+    object-fit: cover;
+}
+
+@mixin blogList-grid{
+    display: grid;
+    grid-template-columns: 350px 350px;
+    grid-template-rows: 240px;
+    row-gap: 2em;
+}
+
+@mixin user-blog{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: .5rem;
+}
+
+@mixin like-comment-btn {
+    width: 350px;
+    height: 50px;
+    font-size: 25px;
+    padding: 4px;
+    border: 1px solid $fontLightColor;
+    outline: none;
+    background: $myWhite;
+    color: $myBlack;
+}
+
+
+.blog-page{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 1em;
+
+    .blog-cover{
+        text-decoration: none;
+    }
+    span{
+        width: 50%;
+        margin: 0 auto;
+        height: 1.3px;
+        background: $myBlack;
+    }
+    #bloglist-heading{
+        margin-top: 2.5rem;
+    }
+
+    h1{
+        font-size: 2rem;
+        font-family: $myFont;
+        min-width: 40%;
+        max-width: 90%;
+        height: auto;
+        margin: .5rem auto;
+        padding: 1rem;
+        font-weight: bolder;
+        color: $myBlack;
+    }
+    .blog-cover{
+        text-decoration: none;
+        color: $myBlack;
+        img{
+            width: 95%;
+            @include cover-image;
+        }
+    }
+}
+
+.blog-articles{
+  
+    @include blogList-grid;
+    padding: 5px;
+    text-align: center;
+
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+    .user-blog{
+        
+        h3{
+            padding: 8px;
+            margin: 5px;
+        }
+        .blog-img{
+            @include user-blog;
+            img{
+                width: 95%;
+                height: 95%;
+                object-fit: cover;
+            }
+        }
+    }
+    
+}
+
+.blogpost{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    h1{
+        font-family: $myFont;
+        font-weight: bolder;
+        padding: 1rem;
+        margin: 1.5rem;
+    }
+
+    img{
+        @include cover-image;
+        width: 100%;
+    }
+    #line{
+        width: 100%;
+        margin: 10px auto;
+        height: 2px;
+        background: $myBlack;
+    }
+    .tag-line{
+        width: 100%;
+        margin-top: 40px;
+        height: 2px;
+        background: $myBlack;
+        i{
+            font-size: 30px;
+        }
+    }
+}
+
+
+.blog-content{
+    width: 60%;
+    margin: 30px auto;
+    padding: 5px;
+
+    .user-details{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .user-profile{
+
+            width: 400px;
+            display: flex;
+            margin: 10px;
+            // justify-content: space-between;
+            padding: 5px;
+            .user-info{
+             h3{
+                 padding: 5px;
+             }
+            span{
+                color: $fontLightColor;
+                font-weight: lighter;
+                font-size: 14px;
+            }
+         }
+        }
+        .social-links{
+          
+            a{
+                i{
+                    font-size: 30px;
+                    padding: 4px;
+                    color: $myBlack;
+                }
+            }
+        }
+    }
+
+    
+}
+
+.blog-para{
+
+    p{
+        padding: 2rem;
+    }
+    .btn{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.like-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.like-btn{
+   @include like-comment-btn;
+   i{
+       padding: 5px;
+       font-size: 22px;
+       margin-right: 5px;
+       margin-top: 2px;
+   }
+}
+
+
+.project-comments{
+  
+  textarea{
+      height: 100px;
+      margin: 10px;
+  }
+  .tags{
+      text-align: left;
+  }
+   
+}
+
+.blog-tags{
+    display: flex;
+    flex-direction: column;
+   
+    .blogtag-list{
+        width: 70%;
+        display: flex;
+        margin:  0 auto;
+        flex-wrap: wrap;
+        height: auto;
+
+        .user-blog{
+        
+            h3{
+                padding: 8px;
+                margin: 5px;
+                color: $myBlack;
+                text-decoration: none;
+            
+            }
+            .blog-img{
+                @include user-blog;
+                img{
+                    width: 95%;
+                    height: 95%;
+                    object-fit: cover;
+                }
+            }
+        }
+      
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .user-profile h3,p{
+//     display: flex;
+//     margin: 4px;
+// }
+// .user-profile p{
+//     color: grey;
+// }
+
+
+
+/* BlogComments */
+
+/* TAGS */
+.tags p,span{
+    display: inline-block;
+}
+
+.blogby-tags{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+#tags-image{
+    width: 200px;
+    height: 200px;
+}

@@ -1,0 +1,41 @@
+@import '../sass/Global.scss';
+
+footer{
+    width: 100%;
+    background: $myBlack;
+    color: $myWhite;
+    font-family: $myFont;
+    marquee{
+        padding: 1.5rem;
+        h4{
+            font-weight: bolder;
+        }
+        span{
+            font-weight: lighter;
+        }
+    }
+    .footer-end{
+        display: flex;
+        flex-direction: column;
+        width: 55%;
+        margin: 0 auto;
+        padding: 1.5rem;
+        font-family: $myFont;
+        p{
+            margin-top: 20px;
+        }
+        .social-links {
+            margin-top: 20px;
+            a{
+            color: $myWhite;
+             margin: 15px;
+            }
+        }
+       #footer-date{
+         width: 500px;
+         margin: 18px auto;
+         font-weight: lighter;
+         font-size: 1em;
+       }
+    }
+}

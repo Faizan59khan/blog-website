@@ -1,0 +1,61 @@
+@import '../../sass/Global.scss';
+
+.create-blog{
+    background:  hsl(0, 0%, 95%);
+}
+
+.form{
+    h1{
+        font-family: $myFont;
+        padding: 1rem;
+    }
+    button{
+        @include btn;
+        width: 20%;
+    }
+}
+.blog-details{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    width: 60%;
+    margin: 10px auto;
+    padding: 1rem;
+    text-align: left;
+    label{
+        margin: 20px;
+    span{
+        display: block;
+        padding: 1rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    .form-input{
+        background: $myWhite;
+        width: 70%;
+        height: 45px;
+        outline: none;
+        border: 1px solid 	hsl(0, 0%, 80%);
+        border-radius: 10px;
+    }
+}
+
+}
+
+
+.blog-content{
+    width: 60%;
+    margin: 20px auto;
+    text-align: left;
+    span{
+        display: block;
+        padding: 1rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+    textarea{
+        width: 100%;
+        height: 400px;
+    }
+}
+

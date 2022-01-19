@@ -1,0 +1,91 @@
+@import '../sass/Global.scss';
+
+
+
+.Navbar {
+   
+    background-color: $myWhite;
+    display: flex;
+    justify-content: space-between;
+    font-family: $myFont;
+    color: $myBlack;
+    height: 4.2rem;
+    border-bottom: 1px solid  $fontLightColor;
+    width: 100%;
+  }
+  
+  .logo{
+      @include logo;
+  }
+  .Navbar__Link{
+      padding: .9rem;
+      font-size: 1.2rem;
+  }
+  .Navbar__Link a{
+      color: $myBlack;
+      text-decoration: none;
+      font-weight: bold;
+  }
+  .Navbar__Link a:hover{
+    color: $myBlack;
+    opacity: .8;
+  }
+
+  
+  .Navbar__Items {
+    display: flex;
+    margin-right: 3rem;
+
+    .user-name{
+      @include user-name;
+      margin-left: 2rem;
+      span{
+        margin-left: 10px;
+      }
+    }
+  }
+
+
+  
+  .Navbar__Items--right {
+    margin-left: 1rem;
+    display: flex;
+  }
+  
+  .Navbar__Link-toggle {
+    display: none;
+  }
+
+
+
+  @media only screen and (max-width: 1100px) {
+    .Navbar__Items,
+    .Navbar {
+      flex-direction: column;
+      height: auto;
+    }
+    .logo{
+      margin-left: 3rem;
+    }
+      
+  .Navbar__Items {
+      display:none;
+    }
+
+      
+  .Navbar__Items--right {
+      margin-left:0;
+    }
+      
+  .Navbar__ToggleShow {
+      display: flex;
+    }
+      
+  .Navbar__Link-toggle {
+      align-self: flex-end;
+      display: initial;
+      position: absolute;
+      cursor: pointer;
+     } 
+
+    }
