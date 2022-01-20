@@ -11,7 +11,9 @@ const Blog = () => {
 
     const [len,setLen]=useState(0);
     const {documents,error}=useCollection('blogs');
+ 
     
+
 
     useEffect(()=>{
          
@@ -59,6 +61,7 @@ const Blog = () => {
     
     },[documents])
 
+  
     return (
         <div>
            <Navbar/>
@@ -88,7 +91,7 @@ const Blog = () => {
            <div className='blog-articles'>
             {
                documents && documents.map((blog)=>{
-                   if(blog.likes.length!==len){                    //dont show the top(Maximum likes & comments) blog in a list   
+                   if(Number(blog.likes.length+blog.comments.length)!==len){                    //dont show the top(Maximum likes & comments) blog in a list   
                     return(
                     <NavLink to={`/blogpost/${blog.id}`} className='user-blog' key={blog.id}>
                         <div className='blog-img'>
@@ -104,9 +107,13 @@ const Blog = () => {
             </div>  
           
         </div>
+        {
+            error && <h1 style={{padding: "20px"}}>Please Create Account or Login</h1>
+        }
         <Footer/>
         </div>
     )
 }
+
 
 export default Blog
