@@ -59,3 +59,24 @@
     }
 }
 
+
+
+
+
+
+/*===================== Media Queries============================= */
+@media only screen and (max-width: 1100px) {
+
+    .blog-details{
+        grid-template-columns: auto;
+        grid-template-rows:auto;
+        
+        span{
+            width: 100% !important;
+            text-align: left;
+        }
+        .form-input{
+            width: 100% !important;
+        }
+    }
+}

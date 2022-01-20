@@ -19,7 +19,7 @@ const Footer = () => {
                   <a href='#'>RSS</a>
                </div>
            
-               <p id='footer-date'>© 2012-2022. Nordic Rose Co. All Rights Reserved.</p>
+               <p id='footer-date'><span>© 2012-2022.Nordic Rose</span> <span>Co. All Rights Reserved.</span></p>
               
             </div>
        </footer>

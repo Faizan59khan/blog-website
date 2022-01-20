@@ -51,13 +51,21 @@ const Blogpost = () => {
                 </div>
 
                 <div className='blog-para'>
-                    <p>
+                    <p id='para'>
                         {document.content}
                     </p>
                     
                     <div className='btn'>
                         <BlogLike project={document}/>
                     </div>
+                        <div className="tags">
+                            <a>Tags:</a>
+                            {document.selectedOption.map((tag) => {
+                                return (
+                                    <a href='#'>{tag.value}</a>
+                                )
+                            })}
+                        </div>
                 </div> 
 
             </div>

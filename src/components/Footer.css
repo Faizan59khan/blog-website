@@ -45,6 +45,11 @@ footer .footer-end p {
 
 footer .footer-end .social-links {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 footer .footer-end .social-links a {
@@ -53,9 +58,30 @@ footer .footer-end .social-links a {
 }
 
 footer .footer-end #footer-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 500px;
   margin: 18px auto;
   font-weight: lighter;
   font-size: 1em;
+}
+
+/*===================== Media Queries============================= */
+@media only screen and (max-width: 1100px) {
+  .footer-end {
+    width: 100% !important;
+  }
+  .footer-end h1 {
+    text-align: left !important;
+  }
+  #footer-date {
+    width: 100% !important;
+    text-align: left !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=Footer.css.map */

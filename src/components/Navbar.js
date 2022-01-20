@@ -43,6 +43,9 @@ const Navbar = () => {
                 <i className="fas fa-bars" />
             </div>
             <nav className="Navbar__Items">
+            <div className="Navbar__Link">
+                    <Link to="/" >Dashboard</Link>
+                </div>
                 <div className="Navbar__Link">
                     <Link to="/blog" >Blog</Link>
                 </div>
@@ -57,17 +60,18 @@ const Navbar = () => {
                     <Link to="/signup">Signup </Link>
                 </div>
                 }
+                 {
+                    user && <div className="Navbar__Link" onClick={logout}>
+                     <a>Log out</a>
+                </div>
+                }
                 {
                     user && <div className='user-name'>
                         <Avatar src={user.photoURL}/>
                         <span>{user.displayName}</span>
                     </div>
                 }
-                 {
-                    user && <div className="Navbar__Link" onClick={logout}>
-                     <a>Log out</a>
-                </div>
-                }
+                
             </nav>
         </div>
 

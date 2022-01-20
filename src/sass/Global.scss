@@ -13,7 +13,7 @@ $myFont: 'Montserrat', sans-serif;
 }
 
 @mixin  logo{
-     color: $myBlack;
+      color: $myBlack;
       padding: .6rem; 
       margin-left: 6rem;
       font-size: 1.8rem;
@@ -49,24 +49,24 @@ $myFont: 'Montserrat', sans-serif;
      display: flex;
      flex-direction: column;
      margin: 6rem auto;
-     padding: 1.5rem;
+     padding: 1.4rem;
      border: none;
      font-family: $myFont;
-     width: 50%;
+     width: 95vw;
      text-align: center;
      h1{
          font-size: 45px;
          font-weight: bold;
      }
      p{
-         width: 45%;
+         width: 26vw;
          margin: 10px auto;
          text-align: center;
          color: $fontLightColor;
      }
      input{
          display: block;
-         width: 50%;
+         width: 25vw;
          height: 40px;
          margin: 15px auto;
          border-radius: 10px;
@@ -82,9 +82,10 @@ $myFont: 'Montserrat', sans-serif;
      button{
         font-size: 25px;
         font-family: $myFont;
-        width: 30%;
+        width: 12vw;
         height: 45px;
-        padding: 7px;
+        padding-top: 4px;
+        padding-bottom: 4px;
         margin: 10px;
         background: $myBlack;
         color: $myWhite;
@@ -94,3 +95,5 @@ $myFont: 'Montserrat', sans-serif;
      }
   }
 
+
+  

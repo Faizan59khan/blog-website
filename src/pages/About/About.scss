@@ -39,3 +39,28 @@ $myYellow: #ffd11a;
         margin-left: 2rem;
     }
 }
+
+
+/*===================== Media Queries============================= */
+@media only screen and (max-width: 1100px) {
+
+     
+.about-text{
+   width: 100% !important;
+   margin-left: -10px !important;
+   p{
+       width: 100% !important;
+   }
+   span{
+ 
+    height: 200px!important;
+    
+}
+}
+.about-head{
+    height: 200px !important;
+    h1{
+        font-size: 4rem !important;
+    }
+}
+}

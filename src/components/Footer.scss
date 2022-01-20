@@ -26,16 +26,39 @@ footer{
         }
         .social-links {
             margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
             a{
             color: $myWhite;
              margin: 15px;
             }
         }
        #footer-date{
+         display: flex;
          width: 500px;
          margin: 18px auto;
          font-weight: lighter;
          font-size: 1em;
        }
     }
+}
+
+
+
+/*===================== Media Queries============================= */
+@media only screen and (max-width: 1100px) {
+
+    .footer-end{
+        width: 100% !important;
+        h1{
+            text-align: left !important;
+        }
+    }
+   
+    #footer-date{
+        width: 100% !important;
+        text-align: left !important;
+        flex-direction: column;
+    }
+
 }

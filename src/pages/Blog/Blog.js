@@ -9,8 +9,8 @@ import './Blog.scss'
 
 const Blog = () => {
 
-    const [image,setImage]=useState("");
     const [len,setLen]=useState("");
+    const [flag,setFlag]=useState(true);
     const {documents,error}=useCollection('blogs');
     
 
@@ -47,7 +47,7 @@ const Blog = () => {
            <Navbar/>
         <div className='blog-page'>
           
-              {
+              {  
                   documents && documents.map((blog)=>{
                     if(blog.likes.length===len){
                     return(
@@ -57,17 +57,20 @@ const Blog = () => {
                         </NavLink>
                      )
                     }
+                  
+
                 })
               }
+              
             
             
-             <span></span>
+              <span></span>
             <h1 id='bloglist-heading'>All articles</h1>
 
            <div className='blog-articles'>
             {
                documents && documents.map((blog)=>{
-                   if(blog.likes.length!==len){                 //dont show the top(Maximum likes) blog in a list   
+                   if(blog.likes.length!==len){                    //dont show the top(Maximum likes) blog in a list   
                     return(
                     <NavLink to={`/blogpost/${blog.id}`} className='user-blog' key={blog.id}>
                         <div className='blog-img'>
@@ -80,7 +83,7 @@ const Blog = () => {
                    }
                 })
             }
-            </div>
+            </div>  
           
         </div>
         <Footer/>

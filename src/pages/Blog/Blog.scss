@@ -25,8 +25,9 @@
     height: 50px;
     font-size: 25px;
     padding: 4px;
-    border: 1px solid $fontLightColor;
+    border: 1px solid 	hsl(0, 0%, 85%);
     outline: none;
+    box-shadow: 2px 2px hsl(0, 0%, 85%);
     background: $myWhite;
     color: $myBlack;
 }
@@ -150,14 +151,16 @@
 
             width: 400px;
             display: flex;
-            margin: 10px;
             // justify-content: space-between;
             padding: 5px;
             .user-info{
              h3{
                  padding: 5px;
+                 margin-left: 4px;
              }
             span{
+                margin: -3px;
+                padding: 3px;
                 color: $fontLightColor;
                 font-weight: lighter;
                 font-size: 14px;
@@ -180,19 +183,40 @@
 }
 
 .blog-para{
-
-    p{
-        padding: 2rem;
+     text-align: center;
+    .para{
+     padding: 2rem;
     }
     .btn{
         display: flex;
         justify-content: space-around;
     }
+    .tags{
+        width: 300px;
+        max-width: 500px;
+        display: flex;
+        margin-left: 3rem;
+        a{
+          padding: 8px;
+          font-weight: bold;
+          font-size: 20px;
+          color: $myBlack;
+        }
+       
+    }
 }
 
+#comment-area{
+    height: 150px;
+    max-height: 300px;
+    padding: 10px;
+    border:1px solid hsl(0, 0%, 85%);
+}
 .like-container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 1.5rem;
 }
 
 .like-btn{
@@ -205,18 +229,40 @@
    }
 }
 
-
-.project-comments{
-  
-  textarea{
-      height: 100px;
-      margin: 10px;
-  }
-  .tags{
-      text-align: left;
-  }
-   
+.blog-cmnts{
+    display: flex;
+    flex-direction: column;
+    font-family: $myFont;
+    .user-cmnts{
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        padding: 10px;
+        box-shadow: 2px 2px hsl(0, 0%, 85%);
+        border: 1px solid hsl(0, 0%, 85%);
+        .user-nameInfo{
+            display: flex;
+            h3{
+                margin-left: 10px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            p{
+                margin-left: 6px;
+                font-size: 15px;
+            }
+        }
+        .comment-content{
+             text-align: left;
+             margin-left: 4rem;
+             margin-top: -20px;
+             padding: 5px;
+        }
+    }
 }
+
+
+
 
 .blog-tags{
     display: flex;
@@ -241,8 +287,8 @@
             .blog-img{
                 @include user-blog;
                 img{
-                    width: 95%;
-                    height: 95%;
+                    width: 90%;
+                    height: 90%;
                     object-fit: cover;
                 }
             }
@@ -261,35 +307,42 @@
 
 
 
+/*===================== Media Queries============================= */
+@media only screen and (max-width: 1100px) {
+   
+    .blog-articles{
+        grid-template-columns: auto; 
+        grid-template-rows: auto;
+    }
 
+    
+.blog-content{
+    width: 100% !important;
+    
 
+    .user-details{
+          flex-direction: column;
 
-
-
-// .user-profile h3,p{
-//     display: flex;
-//     margin: 4px;
-// }
-// .user-profile p{
-//     color: grey;
-// }
-
-
-
-/* BlogComments */
-
-/* TAGS */
-.tags p,span{
-    display: inline-block;
+        }
+   
 }
 
-.blogby-tags{
-    display: flex;
-    text-align: center;
-    align-items: center;
+.blog-page{
+    width: 100% !important;
+    font-size: 1rem!important;
 }
 
-#tags-image{
-    width: 200px;
-    height: 200px;
+.blog-taglist{
+    margin: -30px !important;
+}
+
+.blog-img{
+
+    img{
+        width: 70% !important;
+        height: 70% !important;
+        object-fit: cover;
+    }
+}
+
 }
