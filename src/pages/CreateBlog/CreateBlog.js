@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Select from 'react-select'
 import { timestamp,projectStorage,projectFirestore } from '../../firebase/config'
 import { useNavigate } from 'react-router-dom'
+import Footer from '../../components/Footer'
 
 
 //styles
@@ -152,6 +153,7 @@ const CreateBlog = () => {
             </div>
             <button>Create</button>
         </form>
+        <Footer/>
       </div>
     )
 }

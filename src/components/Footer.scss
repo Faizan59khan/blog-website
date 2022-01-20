@@ -28,6 +28,9 @@ footer{
             margin-top: 20px;
             display: flex;
             flex-wrap: wrap;
+            text-align: center;
+            width: 35%;
+            margin: 0 auto;
             a{
             color: $myWhite;
              margin: 15px;
@@ -52,6 +55,14 @@ footer{
         width: 100% !important;
         h1{
             text-align: left !important;
+        }
+        p{
+            width: 100% !important;
+            text-align: left;
+        }
+        .social-links{
+            text-align: left;
+            margin: 0 !important;
         }
     }
    

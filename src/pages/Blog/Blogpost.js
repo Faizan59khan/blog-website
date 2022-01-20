@@ -30,7 +30,7 @@ const Blogpost = () => {
             <Navbar/>
         <div className='blogpost'>
             <h1>{document.title}</h1>
-            <img src={document.blogimage} />
+            <img src={document.blogimage} id='cover-blog' />
 
            
              

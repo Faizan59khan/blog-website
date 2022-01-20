@@ -22,6 +22,9 @@
       font-size: 1.2rem;
       cursor: pointer;
   }
+  .Navbar__Link:hover{
+    border-bottom: $myBlack 2px solid;
+  }
   .Navbar__Link a{
       color: $myBlack;
       text-decoration: none;
@@ -30,6 +33,7 @@
   .Navbar__Link a:hover{
     color: $myBlack;
     opacity: .8;
+   
   }
 
   
@@ -66,7 +70,8 @@
       height: auto;
     }
     .logo{
-      margin-left: 3rem;
+      margin-left: -80px;
+      font-size: 2rem;
     }
       
   .Navbar__Items {
@@ -88,5 +93,14 @@
       position: absolute;
       cursor: pointer;
      } 
+
+     .user-name{
+
+     
+    
+      #name{
+        font-size: 1.5rem !important;
+      }
+    }
 
     }

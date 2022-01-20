@@ -9,8 +9,7 @@ import './Blog.scss'
 
 const Blog = () => {
 
-    const [len,setLen]=useState("");
-    const [flag,setFlag]=useState(true);
+    const [len,setLen]=useState(0);
     const {documents,error}=useCollection('blogs');
     
 
@@ -19,6 +18,7 @@ const Blog = () => {
       
         let prev=1;
         let maxLen=0;
+        let comMax=0;
 
         if(documents){
             let res= documents && documents.map((blog)=>{
@@ -26,18 +26,35 @@ const Blog = () => {
                    blog.likes
                 )
             })
+
+            let com=documents && documents.map((blog)=>{
+                return(
+                   blog.comments
+                )
+            })
+            
+            com.forEach((count)=>{                             //count comment lengths 
+                if(count.length>prev){
+                 comMax=count.length;
+                }
+                prev=count.length; 
+            })
             
            res.forEach((count)=>{
-
-             if(count.length>prev){                         //if the lenfth is greater than the prev array length
-                     console.log(prev)
-                     console.log(count.length)
+                                                             //count likes length
+             if(count.length>prev){                         //if the length is greater than the prev array length
+                    //  console.log(prev)
+                    //  console.log(count.length)
                      maxLen=count.length;
                  }
               prev=count.length;                             //maintaining the previous value of array
            })
-
-           setLen(maxLen);
+             
+           
+           setLen(Number(maxLen+comMax));
+        //    console.log("uE"+Number(maxLen+comMax));
+        //    console.log(typeof(len))
+          
         }
     
     },[documents])
@@ -49,7 +66,8 @@ const Blog = () => {
           
               {  
                   documents && documents.map((blog)=>{
-                    if(blog.likes.length===len){
+                    if(Number(blog.likes.length+blog.comments.length)===len){        //show the popular blog on top
+                      
                     return(
                         <NavLink to={`/blogpost/${blog.id}`} className='blog-cover' key={blog.id}>
                              <img src={blog.blogimage} />
@@ -70,7 +88,7 @@ const Blog = () => {
            <div className='blog-articles'>
             {
                documents && documents.map((blog)=>{
-                   if(blog.likes.length!==len){                    //dont show the top(Maximum likes) blog in a list   
+                   if(blog.likes.length!==len){                    //dont show the top(Maximum likes & comments) blog in a list   
                     return(
                     <NavLink to={`/blogpost/${blog.id}`} className='user-blog' key={blog.id}>
                         <div className='blog-img'>

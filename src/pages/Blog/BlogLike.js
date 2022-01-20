@@ -119,17 +119,7 @@ const BlogLike = ({project}) => {
     return (
        <div className='like-comment'>
         <div className='like-container'>
-             {/* <h1 className='like-count'>Likes {count}</h1> */}
-             {/* <ul className='toolbar'>
-                 <span>Like By :</span>
-                 {
-                     project.likes.map((pro)=>{
-                         return(
-                             <li key={pro.id}>{pro.displayName}</li>
-                         )
-                     })
-                 }
-             </ul> */}
+              
              {showBtn && <button className='like-btn' onClick={handleChange}><i class="fa-solid fa-thumbs-up"></i>Like</button>}
              {!showBtn && <button className='like-btn' onClick={handleChange}><i class="fa-solid fa-thumbs-down"></i>UnLike</button> }
             
@@ -147,6 +137,7 @@ const BlogLike = ({project}) => {
             onChange={(e) => setNewComment(e.target.value)}
             value={newComment}
       ></textarea>
+      <div id='likes-count'>Total Likes: {count}</div>
       <div className='blog-cmnts'>
        <ul>
         {project.comments.length > 0 && project.comments.map(comment => (

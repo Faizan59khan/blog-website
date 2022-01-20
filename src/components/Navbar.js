@@ -68,7 +68,7 @@ const Navbar = () => {
                 {
                     user && <div className='user-name'>
                         <Avatar src={user.photoURL}/>
-                        <span>{user.displayName}</span>
+                        <span id='name'>{user.displayName}</span>
                     </div>
                 }
                 

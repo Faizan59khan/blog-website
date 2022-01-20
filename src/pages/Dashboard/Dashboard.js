@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useCollection } from '../../hooks/useCollection'
 import { useAuthContext } from '../../hooks/useAuthContext';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useFirestore } from "../../hooks/useFirestore";
 import Sidebar from '../../components/Sidebar';
 
@@ -49,7 +49,8 @@ const Dashboard = () => {
 
                   if(user.uid===blog.createdBy.id){               //if current user's id matches the blog creation id
                    return (
-                      <div className='dashboard-item' key={blog.id}>
+                    <NavLink to={`/blogpost/${blog.id}`} className='dashboard-item' key={blog.id}>
+                
 
                           <div className='blog-update'>
                             <i className="fas fa-edit"></i>
@@ -60,7 +61,8 @@ const Dashboard = () => {
                           </div>
                           <h3>{blog.title}</h3>
                           
-                      </div>
+                      
+                      </NavLink>
                    )
                    }
                  

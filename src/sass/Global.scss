@@ -20,14 +20,16 @@ $myFont: 'Montserrat', sans-serif;
       font-family: $myFont;
       font-weight: bolder;
       cursor: pointer;
+     
 }
 
 @mixin user-name{
      display: flex;
-     font-size: 34px;
+     font-size: 1.6rem;
      font-family: $myFont;
      padding: 2px;
      font-weight: bold;
+     margin-top: 10px;
      margin-right: 2rem;
 }
 

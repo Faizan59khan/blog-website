@@ -45,7 +45,7 @@ const BlogTags = ({tags,id}) => {
                   })
             
 
-                 if(flag===1 && blog.id !== id){        //dont show current open blog in a list (blog.id !== id)                                
+                 if(flag===1 && blog.id !== id){          //dont show current open blog in a list (blog.id !== id)                                
                      flag=0;
                     return(
                         

@@ -32,7 +32,7 @@
     }
     .form-input{
         background: $myWhite;
-        width: 70%;
+        width: 30vw;
         height: 45px;
         outline: none;
         border: 1px solid 	hsl(0, 0%, 80%);
@@ -70,13 +70,13 @@
     .blog-details{
         grid-template-columns: auto;
         grid-template-rows:auto;
-        
+        width: 100% !important;
         span{
             width: 100% !important;
             text-align: left;
         }
-        .form-input{
-            width: 100% !important;
+        input{
+           width: 82vw !important;
         }
     }
 }

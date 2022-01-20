@@ -168,7 +168,8 @@
          }
         }
         .social-links{
-          
+
+            
             a{
                 i{
                     font-size: 30px;
@@ -176,6 +177,7 @@
                     color: $myBlack;
                 }
             }
+    
         }
     }
 
@@ -217,6 +219,9 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 1.5rem;
+    #likes-count{
+        font-weight: bolder;
+    }
 }
 
 .like-btn{
@@ -332,8 +337,8 @@
     font-size: 1rem!important;
 }
 
-.blog-taglist{
-    margin: -30px !important;
+.blogtag-list{
+    margin: -20px !important; 
 }
 
 .blog-img{
@@ -344,5 +349,32 @@
         object-fit: cover;
     }
 }
+.blog-cover{
+  
+    img{
+        height: 300px !important;
+    }
+}
 
+.blogpost{
+    #cover-blog{
+        height: 300px !important;
+    }
+}
+
+.social-links{
+    margin-left: 20px !important;
+    padding: 4px;
+    text-align: center;
+    a{
+        i{
+           padding: 10px;
+        }
+    }
+}
+.blog-para{
+    #para{
+        width: 100% !important;
+    }
+}
 }
