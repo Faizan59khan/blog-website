@@ -19,7 +19,10 @@ const BlogLike = ({project}) => {
 
     const handleSubmit = async (e) => {
       e.preventDefault();
-  
+    
+      if(newComment.length!==0){
+        console.log(newComment.length)
+      
       if(user){
       const commentToAdd = {
         displayName: user.displayName,
@@ -41,6 +44,7 @@ const BlogLike = ({project}) => {
     else{
       alert("You have to login first")
    }
+      }
       
     }
 
@@ -134,6 +138,7 @@ const BlogLike = ({project}) => {
 
         <textarea 
             id='comment-area'
+            placeholder='Write a comment...'
             onChange={(e) => setNewComment(e.target.value)}
             value={newComment}
       ></textarea>

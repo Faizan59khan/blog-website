@@ -89,7 +89,8 @@ const Signup = () => {
                     {thumbnailError && <div className="error">{thumbnailError}</div>}
          
 
-                <button>Create Account</button>
+                {isPending && <button>Loading...</button>}
+                {!isPending && <button>Sign up</button>}
                 {error && <p>{error}</p>}
             </form>
             

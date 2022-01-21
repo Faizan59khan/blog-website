@@ -52,8 +52,8 @@ const Signup = () => {
                 <input type="password" placeholder='Password' onChange={(e)=>{setPassword(e.target.value)}} />
 
                
-
-                <button>Log in</button>
+                {isPending && <button>Loading...</button>}
+                {!isPending && <button>Log in</button>}
                 {error && <p>{error}</p>}
             </form>
             
